@@ -74,11 +74,11 @@ body {
   align-items: baseline;
 }
 
-.site-menu {
+.header-site-menu {
   display: flex;
 }
 
-.site-logo {
+.header-site-logo {
   font-size: 30px;
   font-family: var(--first-font);
   color: var(--first-color);
@@ -87,11 +87,11 @@ body {
   text-align: left;
 }
 
-.site-menu-item:not(:last-child) {
+.header-site-menu-item:not(:last-child) {
   margin-right: 56px;
 }
 
-.site-menu-item-link {
+.header-site-menu-item-link {
   font-size: 14px;
   font-family: var(--first-font);
   color: var(--first-color);
@@ -102,7 +102,7 @@ body {
   position: relative;
 }
 
-.site-menu-item-link::after {
+.header-site-menu-item-link::after {
   content: '';
   display: block;
   width: 100%;
@@ -114,8 +114,8 @@ body {
   visibility: hidden;
 }
 
-.site-menu-item-link:hover,
-.site-menu-item-link:hover::after {
+.header-site-menu-item-link:hover,
+.header-site-menu-item-link:hover::after {
   opacity: 1;
   visibility: visible;
   color: var(--second-color);
@@ -218,7 +218,7 @@ body {
   padding-bottom: 82px;
 }
 
-.team::after {
+.section-team-title::after {
   margin: 40px auto 44px;
 }
 
@@ -251,7 +251,7 @@ body {
   margin-bottom: 30px;
 }
 
-.team-social-list-overlay {
+.section-team-social-list-overlay {
   width: 100%;
   height: 100%;
   background-image: linear-gradient(
@@ -268,7 +268,7 @@ body {
   opacity: 0;
 }
 
-.section-team-list-item:hover .team-social-list-overlay {
+.section-team-list-item:hover .section-team-social-list-overlay {
   opacity: 1;
   visibility: visible;
   transform: translate(-10px, -10px);
@@ -282,11 +282,11 @@ body {
   transition: transform 200ms linear;
 }
 
-.social-list {
+.section-team-social-list {
   display: flex;
 }
 
-.social-list-item-link {
+.section-team-social-list-item-link {
   display: block;
   width: 58px;
   height: 58px;
@@ -295,25 +295,25 @@ body {
   background-color: var(--third-color);
 }
 
-.social-list-item:not(:last-child) {
+.section-team-social-list-item:not(:last-child) {
   border-right: 1px solid rgba(243, 129, 129, 0.5);
 }
 
-.social-list-item-link:hover {
+.section-team-social-list-item-link:hover {
   background-color: var(--first-color);
   transition: background-color 200ms linear;
 }
 
-.social-link-facebook {
+.section-team-social-link-facebook {
   background-image: url('../img/team/social/facebook.png');
 }
-.social-link-twitter {
+.section-team-social-link-twitter {
   background-image: url('../img/team/social/twitter.png');
 }
-.social-link-pinterest {
+.section-team-social-link-pinterest {
   background-image: url('../img/team/social/pinterest.png');
 }
-.social-link-instagram {
+.section-team-social-link-instagram {
   background-image: url('../img/team/social/instagram.png');
 }
 
