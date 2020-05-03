@@ -1,0 +1,410 @@
+:root {
+  --first-font: 'Montserrat', sans-serif;
+  --second-font: 'Kaushan Script', cursive;
+  --third-font: 'Roboto', sans-serif;
+  --first-color: #95e1d3;
+  --second-color: #f38181;
+  --third-color: #fce38a;
+  --fourth-color: #333333;
+  --fifth-color: #999999;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  /* Удаляем элемент из потока документа */
+  position: absolute;
+  /* Временное решение для неверно произносимого, размазанного текста */
+  white-space: nowrap;
+  /* Устанавливаем минимально возможный размер (некоторые скринридеры игнорируют элементы с нулевой высотой и шириной) */
+  width: 1px;
+  height: 1px;
+  /* Скрываем вылезающий за границы контент */
+  overflow: hidden;
+  /* Сбрасываем любые свойства, которые могут повлиять на размер элемента */
+  border: 0;
+  padding: 0;
+  /* Вырезаем ту часть контента, которая должна отображаться. */
+  /* Устаревшее свойство clip для старых браузеров */
+  clip: rect(0 0 0 0);
+  /* clip-path для новых браузеров. inset(50%) определяет область вставки, которая позволит контенту исчезнуть.  */
+  clip-path: inset(50%);
+  /* Похоже, никто до конца не понимает, почему тут margin: -1px. Кроме того, это приводит к проблемам (читай: https://github.com/h5bp/html5-boilerplate/issues/1985). */
+  margin: -1px;
+}
+
+/* ! Header */
+
+.header-menu {
+  padding: 30px 0px 132px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.site-menu {
+  display: flex;
+}
+
+.site-logo {
+  font-size: 30px;
+  font-family: var(--first-font);
+  color: var(--first-color);
+  font-weight: bold;
+  line-height: 36px;
+  text-align: left;
+}
+
+.site-menu-item:not(:last-child) {
+  margin-right: 56px;
+}
+
+.site-menu-item-link {
+  font-size: 14px;
+  font-family: var(--first-font);
+  color: var(--first-color);
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-weight: 400;
+  text-align: center;
+  position: relative;
+}
+
+.site-menu-item-link::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--second-color);
+  position: absolute;
+  bottom: -10px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.site-menu-item-link:hover,
+.site-menu-item-link:hover::after {
+  opacity: 1;
+  visibility: visible;
+  color: var(--second-color);
+  transition: opacity 200ms linear, color 200ms linear;
+}
+
+/* ! Services */
+.section-services {
+  padding-bottom: 98px;
+}
+
+.section-upper-title {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-size: 24px;
+  font-family: var(--second-font);
+  color: var(--fourth-color);
+  line-height: 1.2;
+  text-align: center;
+  text-transform: none;
+}
+
+.section-title {
+  font-size: 30px;
+  font-family: var(--first-font);
+  color: var(--fourth-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.section-title::after {
+  content: '';
+  margin: 40px auto 66px;
+  display: block;
+  background-color: var(--second-color);
+  width: 60px;
+  height: 3px;
+}
+
+.section-service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.section-service-list-item {
+  width: 382px;
+  margin-bottom: 100px;
+  padding-left: 82px;
+  background-repeat: no-repeat;
+  background-position: 20px 0px;
+}
+
+.section-service-list-item:nth-last-child(-n + 3) {
+  margin-bottom: 0px;
+}
+
+.section-service-list li:nth-of-type(1) {
+  background-image: url(../img/cervices/alarm.png);
+}
+.section-service-list li:nth-of-type(2) {
+  background-image: url(../img/cervices/line-grafh.png);
+}
+.section-service-list li:nth-of-type(3) {
+  background-image: url(../img/cervices/computer.png);
+}
+.section-service-list li:nth-of-type(4) {
+  background-image: url(../img/cervices/book.png);
+}
+.section-service-list li:nth-of-type(5) {
+  background-image: url(../img/cervices/home.png);
+}
+.section-service-list li:nth-of-type(6) {
+  background-image: url(../img/cervices/image-frame.png);
+}
+
+.service-list-item-name {
+  font-size: 14px;
+  font-family: var(--first-font);
+  font-weight: 400;
+  color: var(--fourth-color);
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.service-list-item-description {
+  font-size: 15px;
+  font-family: var(--third-font);
+  font-weight: 400;
+  color: var(--fifth-color);
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* ! Team */
+.section-team {
+  padding-bottom: 82px;
+}
+
+.team::after {
+  margin: 40px auto 44px;
+}
+
+.section-team-description {
+  width: 980px;
+  margin: 0 auto 90px;
+  font-size: 15px;
+  font-family: 'Roboto';
+  color: var(--fifth-color);
+  line-height: 1.6;
+  text-align: center;
+  font-weight: 400;
+}
+
+.section-team-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-team-list-item {
+  width: 380px;
+}
+
+.section-team-list-item-image-wrapper {
+  position: relative;
+}
+
+.section-team-list-item-image {
+  background-color: var(--first-color);
+  margin-bottom: 30px;
+}
+
+.team-social-list-overlay {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    rgba(243, 129, 129, 0.9),
+    rgba(252, 227, 138, 0.9)
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.section-team-list-item:hover .team-social-list-overlay {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-10px, -10px);
+  box-shadow: 10px 10px 0px 0px var(--first-color);
+  transition: opacity 200ms linear, transform 200ms linear,
+    box-shadow 200ms linear;
+}
+
+.section-team-list-item:hover .section-team-list-item-image {
+  transform: translate(-10px, -10px);
+  transition: transform 200ms linear;
+}
+
+.social-list {
+  display: flex;
+}
+
+.social-list-item-link {
+  display: block;
+  width: 58px;
+  height: 58px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--third-color);
+}
+
+.social-list-item:not(:last-child) {
+  border-right: 1px solid rgba(243, 129, 129, 0.5);
+}
+
+.social-list-item-link:hover {
+  background-color: var(--first-color);
+  transition: background-color 200ms linear;
+}
+
+.social-link-facebook {
+  background-image: url('../img/team/social/facebook.png');
+}
+.social-link-twitter {
+  background-image: url('../img/team/social/twitter.png');
+}
+.social-link-pinterest {
+  background-image: url('../img/team/social/pinterest.png');
+}
+.social-link-instagram {
+  background-image: url('../img/team/social/instagram.png');
+}
+
+.section-team-item-name {
+  font-size: 14px;
+  font-family: var(--first-font);
+  font-weight: 400;
+  color: var(--fourth-color);
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.section-team-item-position {
+  font-size: 15px;
+  font-family: var(--third-font);
+  color: var(--fifth-color);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ! Footer */
+.main-footer {
+  padding: 10px 0px 12px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.main-footer::after {
+  content: '';
+  background-color: #e5e5e5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1200px;
+  height: 1px;
+}
+
+.main-footer-info {
+  font-size: 14px;
+  font-family: var(--first-font);
+  color: var(--fourth-color);
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.main-footer-info a {
+  color: var(--second-color);
+}
+
+.main-footer-contact-form {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-footer-contact-form-input {
+  border-top: 1px solid #e7e7e7;
+  border-left: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+  border-right: none;
+  width: 234px;
+  height: 40px;
+  font-family: var(--third-font);
+  font-weight: 400;
+  text-align: left;
+}
+
+.main-footer-contact-form-input::placeholder {
+  font-size: 15px;
+  color: #cccccc;
+  font-style: italic;
+  font-family: var(--third-font);
+  line-height: 1.6;
+}
+
+.main-footer-contact-form-button {
+  font-size: 14px;
+  font-family: var(--first-font);
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+  background-color: var(--first-color);
+  width: 150px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}
