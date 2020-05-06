@@ -195,6 +195,7 @@ body {
 }
 
 .service-list-item-name {
+  margin-bottom: 10px;
   font-size: 14px;
   font-family: var(--first-font);
   font-weight: 400;
@@ -223,7 +224,7 @@ body {
 }
 
 .section-team-description {
-  width: 980px;
+  max-width: 980px;
   margin: 0 auto 90px;
   font-size: 15px;
   font-family: 'Roboto';
